@@ -28,6 +28,7 @@ import Query from "./Query.vue";
 
 <style lang="scss">
 .ev-navbar {
+  background-color: #000;
   display: flex;
   align-items: center;
   height: 70px;
@@ -43,6 +44,8 @@ import Query from "./Query.vue";
 
   .secondary-navigation {
     font-size: 1.8rem;
+    gap: 10px;
+    display: flex;
   }
 
   .items-menu {
