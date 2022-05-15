@@ -2,7 +2,7 @@
 import icons from "@/components/icons";
 import Logo from "./Logo.vue";
 import Notifications from "./Notifications.vue";
-import Query from "./Query.vue";
+import Search from "./Search.vue";
 </script>
 
 <template>
@@ -19,7 +19,7 @@ import Query from "./Query.vue";
     </div>
 
     <div class="navigation secondary-navigation">
-      <Query />
+      <Search />
       <Notifications />
       <a href="#"><icons name="face-man" /></a>
     </div>
