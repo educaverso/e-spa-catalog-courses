@@ -1,6 +1,17 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { useKeyEvent } from "@/composables/useKeyEvent";
+import HamburguerItem from "./HamburguerItem.vue";
+import { RouterLink } from "vue-router";
+
+export interface HamburguerProps {
+  value: string;
+  to: string;
+}
+
+defineProps<{
+  items: HamburguerProps[];
+}>();
 
 const showItems = ref(false);
 
@@ -26,18 +37,9 @@ useKeyEvent("Escape", () => {
           :class="['menu-itens', { hidden: !showItems }]"
         >
           <ul>
-            <li>
-              <a href="#">OK</a>
-            </li>
-            <li>
-              <a href="#">Início</a>
-            </li>
-            <li>
-              <a href="#">Cursos</a>
-            </li>
-            <li>
-              <a href="#">Etc</a>
-            </li>
+            <HamburguerItem v-for="(item, i) in items" :key="i">
+              <RouterLink :to="item.to">{{ item.value }}</RouterLink>
+            </HamburguerItem>
           </ul>
         </nav>
       </div>
@@ -119,11 +121,6 @@ useKeyEvent("Escape", () => {
     opacity: 0.8;
     z-index: 2;
     transition: 0.5s;
-
-    ul li {
-      text-transform: uppercase;
-      letter-spacing: 4px;
-    }
   }
 
   .hidden {

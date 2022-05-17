@@ -54,7 +54,6 @@ const closeSearch = () => {
     transition: 0.5s;
     font: inherit;
     font-size: 1.1rem;
-    padding: 0 8px;
   }
 
   .open-search {

@@ -1,8 +1,5 @@
 <script setup lang="ts">
 import { RouterLink } from "vue-router";
-import icons from "../commons/icons";
-import Dropdown from "../commons/dropdown/index.vue";
-import DropdownItem from "../commons/dropdown/DropdownItem.vue";
 import HamburguerMenu from "../commons/hamburguer-menu/index.vue";
 
 const items = [
@@ -16,24 +13,11 @@ const items = [
 
 <template>
   <div class="ev-nav-menu">
-    <div>
-      <HamburguerMenu />
-    </div>
+    <HamburguerMenu :items="items" />
 
     <RouterLink class="md" v-for="(item, i) in items" :key="i" :to="item.to">
       {{ item.value }}
     </RouterLink>
-
-    <!-- <Dropdown class="sm">
-      <icons name="menu" />
-      <template #items>
-        <DropdownItem v-for="(item, i) in items" :key="i">
-          <RouterLink :to="item.to">
-            {{ item.value }}
-          </RouterLink>
-        </DropdownItem>
-      </template>
-    </Dropdown> -->
   </div>
 </template>
 

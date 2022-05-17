@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import icons from "@/components/commons/icons";
 import Dropdown from "../commons/dropdown/index.vue";
-import { RouterLink } from "vue-router";
 import Divider from "../commons/dropdown/Divider.vue";
 import DropdownItem from "../commons/dropdown/DropdownItem.vue";
+import { RouterLink } from "vue-router";
 </script>
 
 <template>
-  <Dropdown class="ev-profile" right>
+  <Dropdown class="ev-profile" :right="true">
     <div class="icon">
       <icons name="face-man" /><icons class="arrow" name="menu-down" />
     </div>
