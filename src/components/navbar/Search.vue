@@ -1,22 +1,30 @@
 <script setup lang="ts">
-import icons from "@/components/icons";
+import icons from "@/components/commons/icons";
 import { ref } from "vue";
 
-const isToggle = ref(false);
+const isOpenSearch = ref(false);
 const query = ref("");
+
+const openSearch = () => {
+  isOpenSearch.value = true;
+};
+
+const closeSearch = () => {
+  isOpenSearch.value = false;
+};
 </script>
 
 <template>
   <label class="ev-search">
-    <div :class="['input-icons', { toggle: isToggle || query }]">
+    <div :class="['input-icons', { 'open-search': isOpenSearch || query }]">
       <icons name="magnify" />
       <input
         v-model="query"
         type="text"
-        placeholder="Cursos, trilhas, categorias"
+        placeholder="Cursos, roteiros ou categorias"
         class="input-field"
-        @focus="isToggle = true"
-        @blur="isToggle = false"
+        @focus="openSearch()"
+        @blur="closeSearch()"
       />
     </div>
   </label>
@@ -24,6 +32,7 @@ const query = ref("");
 
 <style lang="scss">
 .ev-search {
+
   .input-icons {
     display: flex;
     align-items: center;
@@ -34,22 +43,25 @@ const query = ref("");
   }
 
   .input-field {
-    display: block;
+    display: inline-flex;
     padding: 0;
     width: 0;
-    color: #fff;
+    color: var(--color-foreground);
     background-color: transparent;
     box-shadow: none;
     outline: none;
     border: none;
     transition: 0.5s;
-    font-size: 1.2rem;
+    font: inherit;
+    font-size: 1.1rem;
+    padding: 0 8px;
   }
 
-  .toggle {
-    box-shadow: 0 0 0 2px #fff;
-    padding: 5px 10px 5px 10px;
-    border-radius: 10px;
+  .open-search {
+    background-color: #1f1f1f;
+    padding: 5px;
+    border-radius: 1em;
+    height: 2.8rem;
     .input-field {
       width: 250px;
     }

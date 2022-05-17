@@ -1,5 +1,13 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useWindow } from "@/composables/useWindow";
+
+const win = useWindow();
+</script>
 
 <template>
-  <main></main>
+  <main>
+    <pre>
+    <!-- {{ win }} -->
+    </pre>
+  </main>
 </template>

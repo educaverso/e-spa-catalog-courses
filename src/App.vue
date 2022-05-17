@@ -10,6 +10,5 @@ import Navbar from "./components/navbar/index.vue";
   </div>
 </template>
 
-<style>
-@import "@/assets/base.css";
+<style lang="scss">
 </style>

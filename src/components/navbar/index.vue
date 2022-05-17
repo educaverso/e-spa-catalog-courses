@@ -1,62 +1,47 @@
 <script setup lang="ts">
-import icons from "@/components/icons";
 import Logo from "./Logo.vue";
 import Notifications from "./Notifications.vue";
 import Search from "./Search.vue";
+import Navigation from "./Navigation.vue";
+import Profile from "./Profile.vue";
 </script>
 
 <template>
   <div class="ev-navbar">
     <div class="navigation">
       <Logo />
-      <div class="items-menu">
-        <a href="#">Início</a>
-        <a href="#">Cursos</a>
-        <a href="#">Trilhas</a>
-        <a href="#">Bombando</a>
-        <a href="#">Minha lista</a>
-      </div>
+      <Navigation />
     </div>
 
-    <div class="navigation secondary-navigation">
+    <div class="secondary-navigation">
       <Search />
       <Notifications />
-      <a href="#"><icons name="face-man" /></a>
+      <Profile />
     </div>
   </div>
 </template>
 
 <style lang="scss">
 .ev-navbar {
-  background-color: #000;
+  background-color: var(--color-background-navbar);
   display: flex;
-  align-items: center;
-  height: 70px;
   justify-content: space-between;
+  padding: 5px 10px;
+  flex-grow: 1;
 
   .navigation {
     display: flex;
     align-items: center;
-    font-size: 1rem;
-    gap: 10px;
-    color: #fff;
+    gap: 20px;
+    color: var(--color-foreground);
   }
 
   .secondary-navigation {
-    font-size: 1.8rem;
-    gap: 10px;
     display: flex;
+    align-items: center;
+    font-size: 1.618rem;
+    gap: 10px;
   }
 
-  .items-menu {
-    display: flex;
-    gap: 10px;
-
-    a:hover {
-      color: #e08d4c;
-      transition: 0.5s;
-      text-shadow: 0 0 1px #e08d4c;
-    }
-  }
 }
 </style>

@@ -1,37 +1,35 @@
 <script setup lang="ts">
-import icons from "@/components/icons";
+import icons from "@/components/commons/icons";
+import { RouterLink } from "vue-router";
 </script>
 
 <template>
-  <div class="logo">
-    <h2 class="yellow">
-      <icons class="yellow" name="video" />Educa<span class="white">verso</span>
-    </h2>
-  </div>
+  <RouterLink class="ev-logo" to="/">
+    <icons name="video" />educa<span class="foreground">verso</span>
+  </RouterLink>
 </template>
 
-<style>
-
-.logo h2 {
+<style lang="scss">
+@import "@/assets/css/breakpoint.scss";
+.ev-logo {
+  display: flex;
+  align-items: center;
   font-weight: bolder;
   font-size: 1.8rem;
-}
+  color: var(--color-primary);
 
-.white {
-  color: #fff;
-  transition: 0.4s;
-  font-weight: lighter;
-}
+  .foreground {
+    color: var(--color-foreground);
+    transition: 0.4s;
+    font-weight: lighter;
+  }
 
-.blue {
-  text-decoration: none;
-  color: #4dd0e1;
-  transition: 0.4s;
-}
+  @media (max-width: $breakpoint-sm) {
+    display: none;
+  }
 
-.yellow {
-  color: #e08d4c;
-  transition: 0.4s;
+  @media (max-width: $breakpoint-md) {
+    font-size: 1.2rem;
+  }
 }
-
 </style>
