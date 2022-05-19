@@ -1,9 +1,7 @@
 <script setup lang="ts">
-export interface DropdownProps {
-  right: Boolean;
-}
-
-defineProps<DropdownProps>();
+defineProps<{
+  right: boolean;
+}>();
 </script>
 
 <template>

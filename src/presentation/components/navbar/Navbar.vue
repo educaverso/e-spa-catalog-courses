@@ -24,6 +24,7 @@ import Profile from "./Profile.vue";
 <style lang="scss">
 .ev-navbar {
   position: sticky;
+  top: 0;
   z-index: 1;
   width: 100%;
   background-color: var(--color-background-navbar);
@@ -45,6 +46,5 @@ import Profile from "./Profile.vue";
     font-size: 1.618rem;
     gap: 10px;
   }
-
 }
 </style>

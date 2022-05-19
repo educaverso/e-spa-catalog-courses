@@ -1,37 +1,35 @@
 <script setup lang="ts">
-import { ref, toRefs } from "vue";
+import { onMounted, ref, toRefs } from "vue";
 import { useYoutube } from "./useYoutube";
+
+const props = defineProps({
+  videoId: { type: String, required: true },
+  volume: { type: Number, default: 100 },
+});
 
 const el = ref<HTMLElement>();
 
-// const props = defineProps({
-//   videoId: {
-//     type: String,
-//     required: true,
-//   },
-//   volume: {
-//     type: Number,
-//     default: 100,
-//   },
-// });
 // const reactiveProps = toRefs(props);
 
-const { volume, changeVideo, play, pause } = useYoutube(el, {
-  playerVars: { modestbranding: 1, rel: 0 },
+const { changeVideo } = useYoutube(el, {
+  playerVars: {
+    modestbranding: 1,
+    color: "white",
+    iv_load_policy: 3,
+    widget_referrer: "https://educaverso.app",
+    disablekb: 1,
+    showinfo: 0,
+    rel: 0,
+  } as any,
+});
+
+onMounted(() => {
+  changeVideo(props.videoId);
 });
 </script>
 
 <template>
-  <div>
-    <div ref="el"></div>
-
-    <button @click="changeVideo('SVSf8fNp_kg')">Load</button>
-    <button @click="play()">Play</button>
-    <button @click="pause()">||</button>
-    <input v-model="volume" type="range" />
-
-    {{ volume }}
-  </div>
+  <div ref="el" class="ev-youtube"></div>
 </template>
 
 <style></style>
