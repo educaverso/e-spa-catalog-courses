@@ -22,35 +22,57 @@ import { RouterLink } from "vue-router";
       <div class="course-content">
         <div class="module">
           <RouterLink to="/" class="title">
-            <div class="icon-checked">Apresentação</div>
-            <icons class="icon-checked" name="checkbox-marked-circle-outline" />
+            <div class="title">
+              <icons
+                class="icon-checked"
+                name="checkbox-marked-circle-outline"
+              />
+              <div class="icon-checked">Apresentação</div>
+            </div>
+            <div>
+              <icons class="icon-down" name="menu-down" />
+            </div>
           </RouterLink>
           <div>2 aulas <icons name="circle-small" /> 1 desafio</div>
         </div>
 
         <div class="module">
           <RouterLink to="/" class="title">
-            <div>Estruturas sequenciais</div>
-
-            <icons class="icon-muted" name="checkbox-marked-circle-outline" />
+            <div class="title">
+              <icons class="icon-muted" name="checkbox-marked-circle-outline" />
+              <div>Estruturas sequenciais</div>
+            </div>
+            <div>
+              <icons class="icon-down" name="menu-down" />
+            </div>
           </RouterLink>
-          <div>8 aulas <icons name="circle-small" /> 2 desafios</div>
+          <div>2 aulas <icons name="circle-small" /> 1 desafio</div>
         </div>
 
         <div class="module">
           <RouterLink to="/" class="title">
-            <div>Estruturas de repetição</div>
-            <icons class="icon-muted" name="checkbox-marked-circle-outline" />
+            <div class="title">
+              <icons class="icon-muted" name="checkbox-marked-circle-outline" />
+              <div>Estruturas de repetição</div>
+            </div>
+            <div>
+              <icons class="icon-down" name="menu-down" />
+            </div>
           </RouterLink>
-          <div>5 aulas <icons name="circle-small" /> 2 desafios</div>
+          <div>2 aulas <icons name="circle-small" /> 1 desafio</div>
         </div>
 
         <div class="module">
           <RouterLink to="/" class="title">
-            <div>Vetores</div>
-            <icons class="icon-muted" name="checkbox-marked-circle-outline" />
+            <div class="title">
+              <icons class="icon-muted" name="checkbox-marked-circle-outline" />
+              <div>Vetores</div>
+            </div>
+            <div>
+              <icons class="icon-down" name="menu-down" />
+            </div>
           </RouterLink>
-          <div>3 aulas <icons name="circle-small" /> 1 desafio</div>
+          <div>2 aulas <icons name="circle-small" /> 1 desafio</div>
         </div>
       </div>
     </div>
@@ -75,8 +97,8 @@ import { RouterLink } from "vue-router";
 
       .module {
         margin-bottom: 20px;
-        background-color: #1f1f1f;
-        border-radius: 1em;
+        background-color: var(--color-background-secondary);
+        border-radius: 1rem;
         padding: 10px 20px;
 
         .title {
@@ -86,9 +108,14 @@ import { RouterLink } from "vue-router";
           font-family: "Source Sans Pro", sans-serif;
           font-weight: 600;
           display: flex;
-          align-items: center;
           justify-content: space-between;
+          align-items: center;
+          gap: 10px;
           color: var(--color-primary);
+
+          .icon-down {
+            color: var(--color-foreground);
+          }
 
           .icon-checked {
             color: var(--color-success);

@@ -39,11 +39,10 @@ const items = [
   position: sticky;
   top: 0;
   z-index: 1;
-  width: 100%;
-  background-color: var(--color-background-navbar);
+  background-color: var(--color-background-secondary);
   display: flex;
   justify-content: space-between;
-  padding: 5px 10px;
+  padding: 15px 10px;
   border-bottom: 1px solid var(--color-divider);
   flex-grow: 1;
 
@@ -52,7 +51,6 @@ const items = [
     display: flex;
     align-items: center;
     gap: 20px;
-    color: var(--color-foreground);
   }
 
   .secondary-navigation {

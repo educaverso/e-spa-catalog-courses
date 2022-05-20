@@ -17,7 +17,7 @@ import icons from "@/presentation/components/commons/icons";
   height: 1.618em;
   cursor: pointer;
   position: relative;
-  background-color: var(--color-background-navbar);
+  background-color: var(--color-background-secondary);
 
   &::before {
     content: "";

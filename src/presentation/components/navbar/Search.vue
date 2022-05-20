@@ -21,24 +21,24 @@ const query = ref("");
 .ev-search {
   display: flex;
   align-items: center;
-  border-radius: 1em;
+  border-radius: 1.5rem;
   background-color: #fff;
   padding: 5px;
-  border-radius: 1em;
   height: 2.8rem;
 
   .icon {
     cursor: pointer;
     font: inherit;
     font-size: 1.6161rem;
-    color: #6c6c6c;
+    color: #ACAAAA;
+    margin: 0 0.5rem;
   }
 
   .input-field {
     display: inline-flex;
     padding: 0;
     width: 0;
-    color: #6c6c6c;
+    color: #ACAAAA;
     background-color: transparent;
     box-shadow: none;
     outline: none;
@@ -46,7 +46,7 @@ const query = ref("");
     transition: 0.5s;
     font: inherit;
     font-size: 1.1rem;
-    width: 400px;
+    width: 390px;
   }
 }
 </style>

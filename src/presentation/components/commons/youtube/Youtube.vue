@@ -16,7 +16,7 @@ const { changeVideo } = useYoutube(el, {
     modestbranding: 1,
     color: "white",
     iv_load_policy: 3,
-    // widget_referrer: "https://educaverso.app",
+    widget_referrer: "https://educaverso.app",
     disablekb: 1,
     showinfo: 0,
     rel: 0,
