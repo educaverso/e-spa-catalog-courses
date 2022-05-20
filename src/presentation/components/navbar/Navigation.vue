@@ -5,7 +5,7 @@ import HamburguerMenu from "../commons/hamburguer-menu/index.vue";
 const items = [
   { value: "Início", to: "/" },
   { value: "Cursos", to: "/courses" },
-  { value: "Roteiros", to: "/road-map" },
+  { value: "Trilhas", to: "/road-map" },
   { value: "Bombando", to: "/top" },
   { value: "Minha lista", to: "/my-list" },
 ];
@@ -13,8 +13,6 @@ const items = [
 
 <template>
   <div class="ev-nav-menu">
-    <HamburguerMenu :items="items" />
-
     <RouterLink class="md" v-for="(item, i) in items" :key="i" :to="item.to">
       {{ item.value }}
     </RouterLink>
@@ -28,11 +26,12 @@ const items = [
   display: flex;
   align-items: center;
   gap: 10px;
+  cursor: pointer;
 
   a:hover,
   .router-link-active {
-    color: var(--color-primary);
-    text-shadow: 0 0 1px var(--color-primary);
+    color: var(--color-secondary);
+    text-shadow: 0 0 1px var(--color-secondary);
     transition: 0.5s;
   }
 

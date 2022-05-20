@@ -5,7 +5,9 @@ import { RouterLink } from "vue-router";
 
 <template>
   <RouterLink class="ev-logo" to="/">
-    <icons class="secondary" name="pound" />educa<span class="foreground">verso</span>
+    <!-- <icons class="secondary" name="pound" />educa<span class="foreground">verso</span> -->
+    <!-- <img width="128" src="@/presentation/assets/img/brand.svg" /> -->
+    <img width="180" src="@/presentation/assets/img/logo.svg" />
   </RouterLink>
 </template>
 

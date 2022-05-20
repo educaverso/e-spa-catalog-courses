@@ -4,17 +4,30 @@ import Notifications from "./Notifications.vue";
 import Search from "./Search.vue";
 import Navigation from "./Navigation.vue";
 import Profile from "./Profile.vue";
+import HamburguerMenu from "../commons/hamburguer-menu/index.vue";
+
+const items = [
+  { value: "Início", to: "/" },
+  { value: "Cursos", to: "/courses" },
+  { value: "Trilhas", to: "/road-map" },
+  { value: "Bombando", to: "/top" },
+  { value: "Minha lista", to: "/my-list" },
+];
 </script>
 
 <template>
   <div class="ev-navbar">
-    <div class="navigation">
+    <div class="logo">
       <Logo />
-      <Navigation />
+      <HamburguerMenu :items="items" />
+    </div>
+
+    <div class="search">
+      <Search />
     </div>
 
     <div class="secondary-navigation">
-      <Search />
+      <Navigation />
       <Notifications />
       <Profile />
     </div>
@@ -31,9 +44,11 @@ import Profile from "./Profile.vue";
   display: flex;
   justify-content: space-between;
   padding: 5px 10px;
+  border-bottom: 1px solid var(--color-divider);
   flex-grow: 1;
 
-  .navigation {
+  .navigation,
+  .logo {
     display: flex;
     align-items: center;
     gap: 20px;
@@ -43,7 +58,6 @@ import Profile from "./Profile.vue";
   .secondary-navigation {
     display: flex;
     align-items: center;
-    font-size: 1.618rem;
     gap: 10px;
   }
 }

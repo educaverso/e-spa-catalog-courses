@@ -20,6 +20,7 @@ const style = computed(() => ({
 <style lang="scss">
 .ev-aspect-ratio {
   position: relative;
+  flex: 1;
   & > * {
     position: absolute;
     top: 0;

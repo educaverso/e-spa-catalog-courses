@@ -21,8 +21,8 @@
   }
 
   &:hover {
-    color: var(--color-primary);
-    text-shadow: 0 0 1px var(--color-primary);
+    color: var(--color-secondary);
+    text-shadow: 0 0 1px var(--color-secondary);
   }
 }
 </style>

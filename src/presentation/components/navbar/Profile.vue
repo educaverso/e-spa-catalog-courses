@@ -34,6 +34,7 @@ import { RouterLink } from "vue-router";
 
 <style lang="scss">
 .ev-profile {
+  font-size: 1.618rem;
   .icon {
     display: inline-flex;
     align-items: center;

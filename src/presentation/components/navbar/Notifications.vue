@@ -8,6 +8,7 @@ import icons from "@/presentation/components/commons/icons";
 
 <style lang="scss">
 .ev-pulse {
+  font-size: 1.618rem;
   display: inline-flex;
   justify-content: center;
   align-items: center;

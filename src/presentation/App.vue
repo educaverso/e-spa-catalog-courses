@@ -6,8 +6,15 @@ import { Navbar } from "./components/navbar/";
 <template>
   <div id="app">
     <Navbar />
-    <RouterView />
+
+    <main>
+      <RouterView />
+    </main>
   </div>
 </template>
 
-<style lang="scss"></style>
+<style lang="scss">
+main {
+  padding: 10px 0;
+}
+</style>
