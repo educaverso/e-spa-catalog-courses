@@ -1,1 +1,0 @@
-import{_ as e,c as s,o,a as t}from"./index.d3241167.js";const c={},a={class:"ev-top"},n=t("h1",null,"This is an TOP page",-1),_=[n];function r(i,d){return o(),s("div",a,_)}var f=e(c,[["render",r]]);export{f as default};
