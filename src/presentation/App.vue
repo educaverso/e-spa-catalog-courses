@@ -5,16 +5,21 @@ import { Navbar } from "./components/navbar/";
 
 <template>
   <div id="app">
-    <Navbar />
+    <div class="container">
+      <Navbar />
+    </div>
 
-    <main>
+    <main class="container">
       <RouterView />
     </main>
   </div>
 </template>
 
 <style lang="scss">
-main {
-  padding: 10px 0;
+@import "@/presentation/assets/css/main.scss";
+.container {
+  @extend .fill-w;
+  max-width: 1399.98px;
+  min-width: 359.98px;
 }
 </style>

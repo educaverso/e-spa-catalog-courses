@@ -1,15 +1,13 @@
 <script setup lang="ts"></script>
 
 <template>
-  <li class="ev-hamburguer-item">
+  <li class="ev-menu-button-item">
     <slot></slot>
   </li>
 </template>
 
 <style lang="scss">
-@import "@/presentation/assets/css/breakpoint.scss";
-
-.ev-hamburguer-menu {
+.ev-menu-button-menu {
   text-transform: uppercase;
   letter-spacing: 4px;
 }

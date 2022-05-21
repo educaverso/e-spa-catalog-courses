@@ -12,7 +12,7 @@ const items = [
 </script>
 
 <template>
-  <div class="ev-nav-menu">
+  <div class="d-flex align-center ev-nav-menu">
     <RouterLink class="md" v-for="(item, i) in items" :key="i" :to="item.to">
       {{ item.value }}
     </RouterLink>
@@ -21,35 +21,18 @@ const items = [
 
 <style lang="scss">
 @import "@/presentation/assets/css/breakpoint.scss";
-
 .ev-nav-menu {
-  display: flex;
-  align-items: center;
   gap: 10px;
   cursor: pointer;
 
   a:hover,
   .router-link-active {
-    color: var(--color-secondary);
-    text-shadow: 0 0 1px var(--color-secondary);
+    color: var(--theme-dark-secondary);
     transition: 0.5s;
   }
 
-  .sm {
-    font-size: 1.8rem;
-    display: none;
-  }
-
-  @media (max-width: $breakpoint-sm) {
-    font-size: 1rem;
-
-    .sm {
-      display: block;
-    }
-
-    .md {
-      display: none;
-    }
+  @media (max-width: $breakpoint-md){
+    display: none !important;
   }
 }
 </style>

@@ -8,7 +8,7 @@ import { RouterLink } from "vue-router";
 
 <template>
   <Dropdown class="ev-profile" :right="true">
-    <div class="icon">
+    <div class="align-center icon">
       <icons name="face-man" /><icons class="arrow" name="menu-down" />
     </div>
 
@@ -37,7 +37,6 @@ import { RouterLink } from "vue-router";
   font-size: 1.618rem;
   .icon {
     display: inline-flex;
-    align-items: center;
   }
 
   .arrow {

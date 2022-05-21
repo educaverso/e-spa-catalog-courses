@@ -4,7 +4,7 @@ import Notifications from "./Notifications.vue";
 import Search from "./Search.vue";
 import Navigation from "./Navigation.vue";
 import Profile from "./Profile.vue";
-import HamburguerMenu from "../commons/hamburguer-menu/index.vue";
+import { MenuButton } from "../commons/menu-button/";
 
 const items = [
   { value: "Início", to: "/" },
@@ -16,17 +16,15 @@ const items = [
 </script>
 
 <template>
-  <div class="ev-navbar">
-    <div class="logo">
+  <div class="ev-navbar d-flex px-4 py-2 fill-w">
+    <div class="d-flex align-center">
       <Logo />
-      <HamburguerMenu :items="items" />
     </div>
 
-    <div class="search">
-      <Search />
-    </div>
+    <Search />
 
-    <div class="secondary-navigation">
+    <div class="d-flex align-center nav">
+      <MenuButton :items="items" />
       <Navigation />
       <Notifications />
       <Profile />
@@ -39,23 +37,11 @@ const items = [
   position: sticky;
   top: 0;
   z-index: 1;
-  background-color: var(--color-background-secondary);
-  display: flex;
+  background-color: var(--theme-dark-panel);
+  color: var(--theme-dark-foreground);
   justify-content: space-between;
-  padding: 15px 10px;
-  border-bottom: 1px solid var(--color-divider);
-  flex-grow: 1;
 
-  .navigation,
-  .logo {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .secondary-navigation {
-    display: flex;
-    align-items: center;
+  .nav {
     gap: 10px;
   }
 }

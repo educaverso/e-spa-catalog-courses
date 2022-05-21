@@ -9,14 +9,15 @@ import { RouterLink } from "vue-router";
   <div class="ev-youtube-player">
     <div class="info">
       <div class="breadcrumb">
-        Ciência da computação <icons name="arrow-right" /> Introdução à
-        Programação
+        <RouterLink to="/">Ciência da computação </RouterLink
+        ><icons name="arrow-right" />
+        <RouterLink to="/">Introdução à programação</RouterLink>
       </div>
     </div>
     <div class="container">
       <div class="video">
         <AspectRatio :ratio="16 / 9">
-          <Youtube ref="el" class="player" video-id="WObC_2e0kZk"></Youtube>
+          <Youtube ref="el" class="player" video-id="ETLmI_hS8HU"></Youtube>
         </AspectRatio>
       </div>
       <div class="course-content">
@@ -82,10 +83,8 @@ import { RouterLink } from "vue-router";
 <style lang="scss">
 .ev-youtube-player {
   .info {
-    padding: 10px;
-
     .breadcrumb {
-      color: #999;
+      color: var(--theme-dark-label);
     }
   }
   .container {
@@ -97,7 +96,7 @@ import { RouterLink } from "vue-router";
 
       .module {
         margin-bottom: 20px;
-        background-color: var(--color-background-secondary);
+        background-color: var(--theme-dark-panel);
         border-radius: 1rem;
         padding: 10px 20px;
 
@@ -111,14 +110,14 @@ import { RouterLink } from "vue-router";
           justify-content: space-between;
           align-items: center;
           gap: 10px;
-          color: var(--color-primary);
+          color: var(--theme-dark-primary);
 
           .icon-down {
-            color: var(--color-foreground);
+            color: var(--theme-dark-foreground);
           }
 
           .icon-checked {
-            color: var(--color-success);
+            color: var(--theme-dark-success);
           }
 
           .icon-muted {

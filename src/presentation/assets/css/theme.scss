@@ -1,0 +1,54 @@
+$themes: (
+  dark: (
+    background: #1c1c1c,
+    foreground: #fefefe,
+    panel: #404040,
+    label: #b3b5bb,
+    primary: #f2d23f,
+    secondary: #00ffaa,
+    tertiary: #ee4266,
+    success: #00ffaa,
+    info: #00a6ed,
+    warning: #f6511d,
+    danger: #fb3640,
+    hover: #ffffff11,
+  ),
+  // light: (
+  //   background: #fff,
+  //   foreground: #000,
+  //   panel: #e0e0e0,
+  //   label: #888,
+  //   primary: #00aaff,
+  //   secondary: #fbff00,
+  //   info: #00aaff,
+  //   warning: #fbff00,
+  //   danger: #ff1100,
+  //   hover: #00000011,
+  // ),,,
+);
+
+:root {
+  @each $theme, $colors in $themes {
+    @each $color, $value in $colors {
+      --theme-#{$theme}-#{$color}: #{$value};
+    }
+  }
+}
+
+@each $theme, $colors in $themes {
+  .theme--#{$theme} {
+    @each $color, $value in $colors {
+      --theme-#{$color}: var(--theme-#{$theme}-#{$color});
+    }
+  }
+}
+
+@each $color, $value in map-get($themes, "light") {
+  .fg--#{$color} {
+    color: var(--theme-#{$color});
+  }
+
+  .bg--#{$color} {
+    background-color: var(--theme-#{$color});
+  }
+}

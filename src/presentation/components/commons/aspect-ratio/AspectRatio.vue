@@ -12,7 +12,7 @@ const style = computed(() => ({
 </script>
 
 <template>
-  <component :is="tag" class="ev-aspect-ratio" :style="style">
+  <component :is="tag" class="flex-fill ev-aspect-ratio" :style="style">
     <slot></slot>
   </component>
 </template>
@@ -20,7 +20,6 @@ const style = computed(() => ({
 <style lang="scss">
 .ev-aspect-ratio {
   position: relative;
-  flex: 1;
   & > * {
     position: absolute;
     top: 0;

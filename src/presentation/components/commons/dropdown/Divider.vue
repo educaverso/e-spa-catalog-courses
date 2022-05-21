@@ -8,6 +8,6 @@
 .ev-divider {
   padding: 0;
   border: none;
-  border-bottom: 1px solid var(--color-divider);
+  border-bottom: 1px solid var(--theme-dark-panel);
 }
 </style>

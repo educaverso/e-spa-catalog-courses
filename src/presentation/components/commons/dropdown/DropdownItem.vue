@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <li class="ev-dropdown-item">
+  <li class="d-flex align-center pl-2 pr-2 pt-1 pb-1 ev-dropdown-item">
     <slot class="icon" name="icon"></slot>
     <slot></slot>
   </li>
@@ -9,20 +9,16 @@
 
 <style lang="scss">
 .ev-dropdown-item {
-  padding: 5px 10px 5px 10px;
   cursor: pointer;
-  display: flex;
-  align-items: center;
   gap: 10px;
 
   .icon {
-    font-size: 1.6rem;
-    color: var(--color-foreground);
+    font-size: 1.6161rem;
+    color: var(--theme-dark-foreground);
   }
 
   &:hover {
-    color: var(--color-secondary);
-    text-shadow: 0 0 1px var(--color-secondary);
+    color: var(--theme-dark-secondary);
   }
 }
 </style>

@@ -32,8 +32,4 @@ onMounted(() => {
   <div ref="el" class="ev-youtube"></div>
 </template>
 
-<style>
-.ev-youtube {
-  /* flex: 1; */
-}
-</style>
+<style></style>

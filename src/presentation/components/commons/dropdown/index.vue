@@ -6,9 +6,9 @@ defineProps<{
 
 <template>
   <div class="ev-dropdown">
-    <div class="action"><slot></slot></div>
+    <div class="align-center action"><slot></slot></div>
 
-    <ul :class="['menu', right ? 'right' : 'left']">
+    <ul :class="['items', right ? 'right' : 'left']">
       <slot name="items"></slot>
     </ul>
   </div>
@@ -22,12 +22,10 @@ defineProps<{
 
   .action {
     display: inline-flex;
-    align-items: center;
     cursor: pointer;
-    gap: 5px;
   }
 
-  .menu {
+  .items {
     position: absolute;
     font-size: 1rem;
     padding: 5px 0;
@@ -43,7 +41,7 @@ defineProps<{
     position: absolute;
     border-width: 5px 5px 0 5px;
     border-style: solid;
-    border-color: var(--color-foreground) transparent;
+    border-color: var(--theme-dark-foreground) transparent;
     transform: rotate(180deg);
   }
 
@@ -63,7 +61,7 @@ defineProps<{
     }
   }
 
-  &:hover .menu {
+  &:hover .items {
     display: flex;
     flex-direction: column;
   }
