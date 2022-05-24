@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { RouterLink } from "vue-router";
-import HamburguerMenu from "../commons/hamburguer-menu/index.vue";
+import { MenuButton } from "../_shared/menu-button/";
 
 const items = [
   { value: "Início", to: "/" },
@@ -12,10 +12,13 @@ const items = [
 </script>
 
 <template>
-  <div class="d-flex align-center ev-nav-menu">
-    <RouterLink class="md" v-for="(item, i) in items" :key="i" :to="item.to">
-      {{ item.value }}
-    </RouterLink>
+  <div>
+    <MenuButton :items="items" />
+    <div class="d-flex align-center ev-nav-menu">
+      <RouterLink class="md" v-for="(item, i) in items" :key="i" :to="item.to">
+        {{ item.value }}
+      </RouterLink>
+    </div>
   </div>
 </template>
 
@@ -31,7 +34,7 @@ const items = [
     transition: 0.5s;
   }
 
-  @media (max-width: $breakpoint-md){
+  @media (max-width: $breakpoint-md) {
     display: none !important;
   }
 }

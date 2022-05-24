@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import icons from "@/presentation/components/commons/icons";
-import Dropdown from "../commons/dropdown/index.vue";
-import Divider from "../commons/dropdown/Divider.vue";
-import DropdownItem from "../commons/dropdown/DropdownItem.vue";
+import icons from "@/presentation/components/_shared/icons";
+import Dropdown from "../_shared/dropdown/index.vue";
+import Divider from "../_shared/dropdown/Divider.vue";
+import DropdownItem from "../_shared/dropdown/DropdownItem.vue";
 import { RouterLink } from "vue-router";
 </script>
 

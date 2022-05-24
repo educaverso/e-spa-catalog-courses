@@ -1,18 +1,10 @@
 <script setup lang="ts">
-import Logo from "./Logo.vue";
 import Notifications from "./Notifications.vue";
 import Search from "./Search.vue";
 import Navigation from "./Navigation.vue";
 import Profile from "./Profile.vue";
-import { MenuButton } from "../commons/menu-button/";
 
-const items = [
-  { value: "Início", to: "/" },
-  { value: "Cursos", to: "/courses" },
-  { value: "Trilhas", to: "/road-map" },
-  { value: "Bombando", to: "/top" },
-  { value: "Minha lista", to: "/my-list" },
-];
+import { Logo } from "../_shared/logo";
 </script>
 
 <template>
@@ -24,7 +16,6 @@ const items = [
     <Search />
 
     <div class="d-flex align-center nav">
-      <MenuButton :items="items" />
       <Navigation />
       <Notifications />
       <Profile />

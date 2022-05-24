@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import icons from "@/presentation/components/commons/icons";
+import icons from "@/presentation/components/_shared/icons";
 import { ref } from "vue";
 
 const query = ref("");

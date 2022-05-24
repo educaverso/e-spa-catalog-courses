@@ -3,11 +3,7 @@ import { ref } from "vue";
 import { useKeyEvent } from "@/composables/useKeyEvent";
 import MenuButtonItem from "./MenuButtonItem.vue";
 import { RouterLink } from "vue-router";
-
-export interface MenuButtonProps {
-  value: string;
-  to: string;
-}
+import type { MenuButtonProps } from "./MenuButtonProps";
 
 defineProps<{
   items: MenuButtonProps[];

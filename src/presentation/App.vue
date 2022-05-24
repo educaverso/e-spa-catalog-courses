@@ -4,7 +4,7 @@ import { Navbar } from "./components/navbar/";
 </script>
 
 <template>
-  <div id="app">
+  <div>
     <div class="container">
       <Navbar />
     </div>
@@ -17,9 +17,11 @@ import { Navbar } from "./components/navbar/";
 
 <style lang="scss">
 @import "@/presentation/assets/css/main.scss";
+@import "@/presentation/assets/css/breakpoint.scss";
+
 .container {
   @extend .fill-w;
-  max-width: 1399.98px;
-  min-width: 359.98px;
+  min-width: $breakpoint-xs;
+  max-width: $breakpoint-xl;
 }
 </style>

@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import Youtube from "@/presentation/components/commons/youtube/Youtube.vue";
-import AspectRatio from "../components/commons/aspect-ratio/AspectRatio.vue";
-import icons from "../components/commons/icons";
+import Youtube from "@/presentation/components/_shared/youtube/Youtube.vue";
+import AspectRatio from "../components/_shared/aspect-ratio/AspectRatio.vue";
+import icons from "../components/_shared/icons";
 import { RouterLink } from "vue-router";
 </script>
 
@@ -31,7 +31,7 @@ import { RouterLink } from "vue-router";
               <div class="icon-checked">Apresentação</div>
             </div>
             <div>
-              <icons class="icon-down" name="menu-down" />
+              <icons class="icon-down" name="chevron-down" />
             </div>
           </RouterLink>
           <div>2 aulas <icons name="circle-small" /> 1 desafio</div>

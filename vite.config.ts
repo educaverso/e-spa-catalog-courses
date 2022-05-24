@@ -8,7 +8,6 @@ import Pages from "vite-plugin-pages";
 
 export default defineConfig({
   plugins: [vue(), vueJsx(), Pages({ dirs: "./src/presentation/pages" })],
-  // base: "/e-spa-catalog-courses",
   resolve: {
     alias: {
       "@": fileURLToPath(new URL("./src", import.meta.url)),
