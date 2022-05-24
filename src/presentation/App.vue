@@ -21,6 +21,7 @@ import { Navbar } from "./components/navbar/";
 
 .container {
   @extend .fill-w;
+  margin: 0 auto;
   min-width: $breakpoint-xs;
   max-width: $breakpoint-xl;
 }
