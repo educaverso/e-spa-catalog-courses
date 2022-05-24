@@ -1,0 +1,1 @@
+import{_ as e,c as s,o as t,a as c}from"./index.0030e171.js";const o={},a={class:"ev-my-list"},n=c("h1",null,"This is an MY LIST page",-1),_=[n];function r(i,d){return t(),s("div",a,_)}var f=e(o,[["render",r]]);export{f as default};
