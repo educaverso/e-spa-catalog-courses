@@ -23,7 +23,7 @@ const items = [
 </template>
 
 <style lang="scss">
-@import "@/presentation/assets/css/breakpoint.scss";
+@import "@/presentation/_assets/css/breakpoint.scss";
 .ev-nav-menu {
   gap: 10px;
   cursor: pointer;

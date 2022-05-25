@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import icons from "@/presentation/components/_shared/icons";
+import icons from "@/presentation/_components/_shared/icons";
 import { ref } from "vue";
 
 const query = ref("");
 </script>
 
 <template>
-  <label class="d-flex align-center p-5 ev-search">
+  <label class="d-flex align-center ev-search">
     <icons name="magnify" />
     <input
       v-model="query"
@@ -18,7 +18,7 @@ const query = ref("");
 </template>
 
 <style lang="scss">
-@import "@/presentation/assets/css/breakpoint.scss";
+@import "@/presentation/_assets/css/breakpoint.scss";
 
 .ev-search {
   border-radius: 1.4rem;

@@ -6,20 +6,20 @@ import { RouterLink } from "vue-router";
   <RouterLink class="d-flex align-center ev-logo" to="/">
     <img
       class="logo"
-      src="@/presentation/assets/img/logo.svg"
+      src="@/presentation/_assets/img/logo.svg"
       alt="Logomarca"
     />
     <img
       height="25"
       class="brand"
-      src="@/presentation/assets/img/brand.svg"
+      src="@/presentation/_assets/img/brand.svg"
       alt="Logomarca"
     />
   </RouterLink>
 </template>
 
 <style lang="scss">
-@import "@/presentation/assets/css/breakpoint.scss";
+@import "@/presentation/_assets/css/breakpoint.scss";
 .ev-logo {
   .brand {
     display: none;

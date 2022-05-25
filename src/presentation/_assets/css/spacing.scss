@@ -33,6 +33,10 @@
 }
 
 @for $i from 0 through 8 {
+  .m-#{$i} {
+    margin: var(--spacing-#{$i}) !important;
+  }
+
   .mt-#{$i},
   .my-#{$i},
   .ma-#{$i} {
@@ -57,6 +61,10 @@
 }
 
 @for $i from 0 through 8 {
+  .p-#{$i} {
+    padding: var(--spacing-#{$i}) !important;
+  }
+
   .pt-#{$i},
   .py-#{$i},
   .pa-#{$i} {
@@ -77,5 +85,11 @@
   .px-#{$i},
   .pa-#{$i} {
     padding-right: var(--spacing-#{$i}) !important;
+  }
+}
+
+@for $i from 0 through 8 {
+  .gap-#{$i} {
+    gap: var(--spacing-#{$i}) !important;
   }
 }

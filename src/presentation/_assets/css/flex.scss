@@ -1,4 +1,5 @@
-$alignments: center, flex-start, flex-end, stretch;
+$alignments: center, flex-start, flex-end, stretch, space-between, space-around,
+  space-evenly;
 
 @each $align in $alignments {
   .align-#{$align} {

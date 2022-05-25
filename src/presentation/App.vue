@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { RouterView } from "vue-router";
-import { Navbar } from "./components/navbar/";
+import { Navbar } from "./_components/navbar/";
 </script>
 
 <template>
@@ -16,8 +16,8 @@ import { Navbar } from "./components/navbar/";
 </template>
 
 <style lang="scss">
-@import "@/presentation/assets/css/main.scss";
-@import "@/presentation/assets/css/breakpoint.scss";
+@import "@/presentation/_assets/css/main.scss";
+@import "@/presentation/_assets/css/breakpoint.scss";
 
 .container {
   @extend .fill-w;

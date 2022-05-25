@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import icons from "@/presentation/components/_shared/icons";
+import icons from "@/presentation/_components/_shared/icons";
 </script>
 
 <template>

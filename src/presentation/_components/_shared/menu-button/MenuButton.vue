@@ -44,7 +44,7 @@ useKeyEvent("Escape", () => {
 </template>
 
 <style lang="scss">
-@import "@/presentation/assets/css/breakpoint.scss";
+@import "@/presentation/_assets/css/breakpoint.scss";
 
 .ev-menu-button {
   display: none;

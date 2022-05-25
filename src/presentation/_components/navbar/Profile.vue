@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import icons from "@/presentation/components/_shared/icons";
+import icons from "@/presentation/_components/_shared/icons";
 import Dropdown from "../_shared/dropdown/index.vue";
 import Divider from "../_shared/dropdown/Divider.vue";
 import DropdownItem from "../_shared/dropdown/DropdownItem.vue";

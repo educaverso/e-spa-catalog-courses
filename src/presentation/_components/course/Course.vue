@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import Youtube from "@/presentation/components/_shared/youtube/Youtube.vue";
-import AspectRatio from "@/presentation/components/_shared/aspect-ratio/AspectRatio.vue";
-import { Breadcrumb } from "@/presentation/components/_shared/breadcrumb";
+import Youtube from "@/presentation/_components/_shared/youtube/Youtube.vue";
+import AspectRatio from "@/presentation/_components/_shared/aspect-ratio/AspectRatio.vue";
+import { Breadcrumb } from "@/presentation/_components/_shared/breadcrumb";
 import Module from "./modules/Module.vue";
 
 const breadcrumbItems = [
