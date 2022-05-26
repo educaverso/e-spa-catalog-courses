@@ -1,43 +1,53 @@
 <script setup lang="ts">
 import icons from "@/presentation/_components/_shared/icons";
-import { RouterLink } from "vue-router";
-import type ModuleProps from "./ModuleProps";
 
-// defineProps<{
-//   item: ModuleProps;
-// }>();
+export interface ModuleHeaderInterface {
+  title: string;
+  qtyLessons: number;
+  qtyChallenge: number;
+  done: boolean;
+  duration: string;
+}
+
+defineProps<{
+  header: ModuleHeaderInterface;
+}>();
 </script>
 
 <template>
   <div class="ev-module-header">
-    <RouterLink to="/">
-      <div
-        class="d-flex align-center justify-space-between ev-module-header__title"
-      >
-        <div
+    <div class="d-flex align-center justify-space-between">
+      <div :class="['d-flex align-center gap-2 ev-module-header__title']">
+        <icons
           :class="[
-            'd-flex align-center gap-2',
-            { 'ev-module-header--checked': true },
+            header.done ? 'ev-module-header--done' : 'ev-module-header__icon',
           ]"
-        >
-          <icons name="check-circle-outline" />
-          <span class="">Apresentação</span>
-        </div>
-        <div>
-          <icons class="down" name="chevron-down" />
-        </div>
+          name="check-decagram"
+        />
+        <span class="">{{ header.title }}</span>
       </div>
-    </RouterLink>
+      <div>
+        <icons name="chevron-down" />
+      </div>
+    </div>
     <div
       class="d-flex align-center justify-space-between ev-module-header__info"
     >
       <div class="d-flex align-center gap-1">
-        <div>{{ 4 }} aula<span v-if="4 > 1">s</span></div>
+        <div>
+          {{ header.qtyLessons }} aula<span v-if="header.qtyLessons > 1"
+            >s</span
+          >
+        </div>
         <icons name="circle-small" />
-        <div>{{ 2 }} desafio<span v-if="2 > 1">s</span></div>
+        <div>
+          {{ header.qtyChallenge }} desafio<span v-if="header.qtyChallenge > 1"
+            >s</span
+          >
+        </div>
       </div>
       <div class="d-flex align-center gap-4">
-        <span>40:23 </span>
+        <span>{{ header.duration }}</span>
       </div>
     </div>
   </div>
@@ -45,17 +55,18 @@ import type ModuleProps from "./ModuleProps";
 
 <style lang="scss">
 .ev-module-header {
+  cursor: pointer;
 
-  &--checked {
+  &--done {
     color: var(--theme-dark-secondary);
   }
 
   &__title {
-    font-size: large;
+    color: var(--theme-dark-primary);
+    font-weight: bolder;
   }
 
   &__icon {
-    font-size: large;
     color: var(--theme-dark-label);
   }
 

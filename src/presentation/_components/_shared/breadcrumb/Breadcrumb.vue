@@ -1,10 +1,15 @@
 <script setup lang="ts">
 import icons from "@/presentation/_components/_shared/icons";
 import { RouterLink } from "vue-router";
-import type { BreadcrumbProps } from "./BreadcrumbProps";
+
+export interface BreadcrumbInterface {
+  to: string;
+  value: string;
+}
+
 
 defineProps<{
-  items: BreadcrumbProps[];
+  items: BreadcrumbInterface[];
 }>();
 </script>
 
@@ -20,5 +25,6 @@ defineProps<{
 <style lang="scss">
 .ev-breadcrumb {
   color: var(--theme-dark-label);
+  font-size: 0.875rem;;
 }
 </style>

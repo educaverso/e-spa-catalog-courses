@@ -1,19 +1,31 @@
 <script setup lang="ts">
 import icons from "@/presentation/_components/_shared/icons";
 import { RouterLink } from "vue-router";
-import type ModuleItemProps from "./ModuleItemProps";
+
+export interface ModuleItemInterface {
+  to: string;
+  title: string;
+  duration: string;
+  icon: string;
+  done: boolean;
+}
 
 defineProps<{
-  item: ModuleItemProps;
+  item: ModuleItemInterface;
 }>();
 </script>
 
 <template>
   <RouterLink :to="item.to">
-    <div class="ev-item-module d-flex gap-2 align-center justify-space-between">
+    <div class="d-flex gap-2 align-center justify-space-between ev-item-module">
       <div class="d-flex align-center gap-2">
-        <icons class="ev-item-module__icon" :name="item.icon" />
-        <div>{{ item.title }}</div>
+        <icons
+          :class="[
+            item.done ? 'ev-item-module--done' : 'ev-item-module__icon',
+          ]"
+          :name="item.icon"
+        />
+        <span>{{ item.title }}</span>
       </div>
       <div class="d-flex align-center gap-4">
         <span class="ev-item-module__time">{{ item.duration }}</span>
@@ -24,14 +36,19 @@ defineProps<{
 
 <style lang="scss">
 .ev-item-module {
+  font-size: 0.875rem;
+  font-weight: 600;
 
   &__icon {
-    font-size: large;
     color: var(--theme-dark-label);
   }
 
+  &--done {
+    color: var(--theme-dark-success);
+  }
+
   &__time {
-    font-size: small;
+    font-size: x-small;
     color: var(--theme-dark-label);
   }
 }

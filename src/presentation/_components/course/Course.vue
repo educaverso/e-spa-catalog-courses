@@ -15,7 +15,7 @@ const modules = [
     title: "Apresentação",
     qtyLessons: 4,
     qtyChallenge: 1,
-    done: true,
+    done: false,
   },
 
   {
@@ -44,17 +44,17 @@ const modules = [
 </script>
 
 <template>
-  <div class="ev-youtube-player">
-    <div class="pl-5 pt-2 pb-2 pr-5">
+  <div class="ev-course pr-4">
+    <div class="pl-4 pt-2 pb-2 pr-4">
       <Breadcrumb :items="breadcrumbItems" />
     </div>
-    <div class="d-flex">
-      <div class="video">
+    <div class="d-flex gap-2">
+      <div class="flex-fill">
         <AspectRatio :ratio="16 / 9">
-          <Youtube ref="el" class="player" video-id="ETLmI_hS8HU"></Youtube>
+          <Youtube ref="el" video-id="ETLmI_hS8HU"></Youtube>
         </AspectRatio>
       </div>
-      <div class="course-content">
+      <div class="d-flex gap-2 ev-course__content">
         <Module v-for="(m, index) in modules" :key="index" :item="m" />
       </div>
     </div>
@@ -62,15 +62,12 @@ const modules = [
 </template>
 
 <style lang="scss">
-.ev-youtube-player {
-  .course-content {
-    width: 30%;
-    margin: 0 20px;
-  }
-
-  .video {
-    width: 70%;
-    align-items: flex-start;
+.ev-course {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.5;
+  &__content {
+    width: 350px;
+    flex-direction: column;
   }
 }
 </style>
