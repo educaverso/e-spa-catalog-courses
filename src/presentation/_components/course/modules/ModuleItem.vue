@@ -36,7 +36,6 @@ defineProps<{
 
 <style lang="scss">
 .ev-item-module {
-  font-size: 0.875rem;
   font-weight: 600;
 
   &__icon {

@@ -15,11 +15,11 @@ import { Logo } from "../_shared/logo";
 
     <Search />
 
-    <div class="d-flex align-center nav">
+    <nav class="d-flex align-center">
       <Navigation />
       <Notifications />
       <Profile />
-    </div>
+    </nav>
   </div>
 </template>
 
@@ -31,9 +31,5 @@ import { Logo } from "../_shared/logo";
   background-color: var(--theme-dark-panel);
   color: var(--theme-dark-foreground);
   justify-content: space-between;
-
-  .nav {
-    gap: 10px;
-  }
 }
 </style>

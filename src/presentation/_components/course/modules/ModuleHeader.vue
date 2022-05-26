@@ -64,6 +64,7 @@ defineProps<{
   &__title {
     color: var(--theme-dark-primary);
     font-weight: bolder;
+    font-size: 1.1618rem;
   }
 
   &__icon {

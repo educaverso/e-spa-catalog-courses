@@ -14,7 +14,7 @@ const items = [
 <template>
   <div>
     <MenuButton :items="items" />
-    <div class="d-flex align-center ev-nav-menu">
+    <div class="d-flex align-center gap-2 ev-nav-menu">
       <RouterLink class="md" v-for="(item, i) in items" :key="i" :to="item.to">
         {{ item.value }}
       </RouterLink>
@@ -25,14 +25,7 @@ const items = [
 <style lang="scss">
 @import "@/presentation/_assets/css/breakpoint.scss";
 .ev-nav-menu {
-  gap: 10px;
   cursor: pointer;
-
-  a:hover,
-  .router-link-active {
-    color: var(--theme-dark-secondary);
-    transition: 0.5s;
-  }
 
   @media (max-width: $breakpoint-md) {
     display: none !important;

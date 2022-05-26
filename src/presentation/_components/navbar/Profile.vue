@@ -17,7 +17,7 @@ import { RouterLink } from "vue-router";
         <template #icon>
           <icons name="account" />
         </template>
-        <RouterLink to="">Conta</RouterLink>
+        <RouterLink to="/accounts">Conta</RouterLink>
       </DropdownItem>
 
       <Divider />
@@ -26,7 +26,7 @@ import { RouterLink } from "vue-router";
         <template #icon>
           <icons name="logout" />
         </template>
-        <RouterLink to="">Sair da educaverso</RouterLink>
+        <RouterLink to="/logout">Sair da educaverso</RouterLink>
       </DropdownItem>
     </template>
   </Dropdown>

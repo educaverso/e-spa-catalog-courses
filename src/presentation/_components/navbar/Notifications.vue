@@ -3,7 +3,9 @@ import icons from "@/presentation/_components/_shared/icons";
 </script>
 
 <template>
-  <a href="#" class="align-center ev-pulse"><icons name="bell-ring-outline" /></a>
+  <a href="#" class="align-center ev-pulse"
+    ><icons name="bell-ring-outline"
+  /></a>
 </template>
 
 <style lang="scss">

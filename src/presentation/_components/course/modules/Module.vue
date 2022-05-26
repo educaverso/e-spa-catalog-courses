@@ -37,7 +37,7 @@ defineProps<{
       <div class="d-flex gap-2 pt-2 pb-2 pl-3 pr-3 ev-module__content">
         <ModuleItem
           :item="{
-            to: '/',
+            to: item.to,
             title: 'Introdução à programação',
             duration: '10:23',
             icon: 'movie-open-play-outline',
@@ -47,7 +47,7 @@ defineProps<{
 
         <ModuleItem
           :item="{
-            to: '/',
+            to: item.to,
             title: 'Variáveis e tipos',
             duration: '07:00',
             icon: 'movie-open-play-outline',
@@ -57,7 +57,7 @@ defineProps<{
 
         <ModuleItem
           :item="{
-            to: '/',
+            to: item.to,
             title: 'Operadores lógicos',
             duration: '07:00',
             icon: 'format-text',
@@ -67,7 +67,7 @@ defineProps<{
 
         <ModuleItem
           :item="{
-            to: '/',
+            to: item.to,
             title: 'Estruturas de controle e os operadores lógicos',
             duration: '10:00',
             icon: 'movie-open-play-outline',
@@ -77,7 +77,7 @@ defineProps<{
 
         <ModuleItem
           :item="{
-            to: '/',
+            to: item.to,
             title: 'Desafio',
             duration: '10:00',
             icon: 'help',

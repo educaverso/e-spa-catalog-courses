@@ -5,13 +5,13 @@ import { Breadcrumb } from "@/presentation/_components/_shared/breadcrumb";
 import Module from "./modules/Module.vue";
 
 const breadcrumbItems = [
-  { to: "/", value: "Ciência da computação" },
-  { to: "/", value: "Introdução à computação" },
+  { to: "/roadmap/1/", value: "Ciência da computação" },
+  { to: "/roadmap/1/courses/1", value: "Introdução à computação" },
 ];
 
 const modules = [
   {
-    to: "/",
+    to: "/roadmap/1/courses/1/modules/1",
     title: "Apresentação",
     qtyLessons: 4,
     qtyChallenge: 1,
@@ -19,7 +19,7 @@ const modules = [
   },
 
   {
-    to: "/",
+    to: "/roadmap/1/courses/1/modules/2",
     title: "Estruturas sequenciais",
     qtyLessons: 6,
     qtyChallenge: 2,
@@ -27,14 +27,14 @@ const modules = [
   },
 
   {
-    to: "/",
+    to: "/roadmap/1/courses/1/modules/3",
     title: "Estruturas de repetição",
     qtyLessons: 8,
     qtyChallenge: 1,
     done: false,
   },
   {
-    to: "/",
+    to: "/roadmap/1/courses/1/modules/4",
     title: "Vetores",
     qtyLessons: 8,
     qtyChallenge: 1,

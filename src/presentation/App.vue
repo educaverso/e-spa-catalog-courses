@@ -25,4 +25,10 @@ import { Navbar } from "./_components/navbar/";
   min-width: $breakpoint-xs;
   max-width: $breakpoint-xl;
 }
+
+a:hover,
+.router-link-active {
+  color: var(--theme-dark-secondary);
+  transition: 0.5s;
+}
 </style>

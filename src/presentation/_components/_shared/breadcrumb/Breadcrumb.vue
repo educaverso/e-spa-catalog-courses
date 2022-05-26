@@ -7,7 +7,6 @@ export interface BreadcrumbInterface {
   value: string;
 }
 
-
 defineProps<{
   items: BreadcrumbInterface[];
 }>();
@@ -25,6 +24,6 @@ defineProps<{
 <style lang="scss">
 .ev-breadcrumb {
   color: var(--theme-dark-label);
-  font-size: 0.875rem;;
+  font-size: 0.875rem;
 }
 </style>
