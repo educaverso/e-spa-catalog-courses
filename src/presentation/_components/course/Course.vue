@@ -5,7 +5,6 @@ import { Breadcrumb } from "@/presentation/_components/_shared/breadcrumb";
 import Module from "./modules/Module.vue";
 
 const breadcrumbItems = [
-  { to: "/roadmap/1/", value: "Ciência da computação" },
   { to: "/roadmap/1/courses/1", value: "Introdução à computação" },
 ];
 

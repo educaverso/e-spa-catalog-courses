@@ -17,7 +17,7 @@ defineProps<{
 
 <template>
   <RouterLink :to="item.to">
-    <div class="d-flex gap-2 align-center justify-space-between ev-item-module">
+    <div class="d-flex align-center justify-space-between ev-item-module">
       <div class="d-flex align-center gap-2">
         <icons
           :class="[
@@ -36,7 +36,7 @@ defineProps<{
 
 <style lang="scss">
 .ev-item-module {
-  font-weight: 600;
+  font-weight: 300;
 
   &__icon {
     color: var(--theme-dark-label);

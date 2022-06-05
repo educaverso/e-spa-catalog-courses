@@ -34,7 +34,7 @@ defineProps<{
         </div>
       </template>
 
-      <div class="d-flex gap-2 pt-2 pb-2 pl-3 pr-3 ev-module__content">
+      <div class="d-flex gap-3 pt-2 pb-2 pl-3 pr-3 ev-module__content">
         <ModuleItem
           :item="{
             to: item.to,

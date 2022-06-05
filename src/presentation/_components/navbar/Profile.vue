@@ -9,7 +9,7 @@ import { RouterLink } from "vue-router";
 <template>
   <Dropdown class="ev-profile" :right="true">
     <div class="align-center icon">
-      <icons name="face-man" /><icons class="arrow" name="menu-down" />
+      <icons name="account-cog" /><icons class="arrow" name="menu-down" />
     </div>
 
     <template #items>
