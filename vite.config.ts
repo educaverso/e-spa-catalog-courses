@@ -7,7 +7,7 @@ import vueJsx from "@vitejs/plugin-vue-jsx";
 import Pages from "vite-plugin-pages";
 
 export default defineConfig({
-  plugins: [vue(), vueJsx(), Pages({ dirs: "./src/presentation/pages" })],
+  plugins: [vue(), vueJsx(), Pages({ dirs: "./src/infra/web/pages" })],
   resolve: {
     alias: {
       "@": fileURLToPath(new URL("./src", import.meta.url)),
