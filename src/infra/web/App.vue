@@ -5,7 +5,7 @@ import { Navbar } from "./_components/navbar/";
 
 <template>
   <div>
-    <Navbar />
+    <!-- <Navbar /> -->
     <RouterView />
   </div>
 </template>

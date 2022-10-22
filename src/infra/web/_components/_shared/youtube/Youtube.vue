@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, ref, toRefs } from "vue";
+import { onMounted, ref, toRefs, watchEffect } from "vue";
 import { useYoutube } from "./useYoutube";
 
 const props = defineProps({
@@ -23,7 +23,7 @@ const { changeVideo } = useYoutube(el, {
   } as any,
 });
 
-onMounted(() => {
+watchEffect(() => {
   changeVideo(props.videoId);
 });
 </script>

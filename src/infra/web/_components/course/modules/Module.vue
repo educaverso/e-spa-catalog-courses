@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import ModuleItem from "./ModuleItem.vue";
+import ModuleItem, { type ModuleItemInterface } from "./ModuleItem.vue";
 import ModuleHeader from "./ModuleHeader.vue";
 import Collapse from "../../_shared/collapsed/Collapse.vue";
 
@@ -9,10 +9,12 @@ export interface ModuleInterface {
   qtyLessons: number;
   qtyChallenge: number;
   done: boolean;
+  items: ModuleItemInterface[];
+  duration: string;
 }
 
 defineProps<{
-  item: ModuleInterface;
+  module: ModuleInterface;
 }>();
 </script>
 
@@ -21,21 +23,13 @@ defineProps<{
     <Collapse>
       <template #activator="{ on }">
         <div class="pt-1 pb-1 pl-3 pr-3">
-          <ModuleHeader
-            v-on="on"
-            :header="{
-              title: item.title,
-              qtyLessons: item.qtyLessons,
-              qtyChallenge: item.qtyChallenge,
-              done: item.done,
-              duration: '40:35',
-            }"
-          />
+          <ModuleHeader v-on="on" :header="module" />
         </div>
       </template>
 
       <div class="d-flex gap-3 pt-2 pb-2 pl-3 pr-3 ev-module__content">
-        <ModuleItem
+        <ModuleItem v-for="item in module.items" :key="item.to" :item="item" />
+        <!-- <ModuleItem
           :item="{
             to: item.to,
             title: 'Introdução à programação',
@@ -45,7 +39,7 @@ defineProps<{
           }"
         />
 
-        <ModuleItem
+         <ModuleItem
           :item="{
             to: item.to,
             title: 'Variáveis e tipos',
@@ -83,7 +77,7 @@ defineProps<{
             icon: 'help',
             done: false,
           }"
-        />
+        /> -->
       </div>
     </Collapse>
   </div>
