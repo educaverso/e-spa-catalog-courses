@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import ModuleItem, { type ModuleItemInterface } from "./ModuleItem.vue";
+import ModuleItem, {  type ModuleContent } from "./ModuleItem.vue";
 import ModuleHeader from "./ModuleHeader.vue";
 import Collapse from "../../_shared/collapsed/Collapse.vue";
 
@@ -9,7 +9,7 @@ export interface ModuleInterface {
   qtyLessons: number;
   qtyChallenge: number;
   done: boolean;
-  items: ModuleItemInterface[];
+  items: ModuleContent[];
   duration: string;
 }
 
