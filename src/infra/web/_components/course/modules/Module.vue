@@ -22,7 +22,7 @@ defineProps<{
   <div class="ev-module">
     <Collapse>
       <template #activator="{ on }">
-        <div class="pt-1 pb-1 pl-3 pr-3">
+        <div class="pt-1 pb-1 pl-3 pr-3 mb-2">
           <ModuleHeader v-on="on" :header="module" />
         </div>
       </template>

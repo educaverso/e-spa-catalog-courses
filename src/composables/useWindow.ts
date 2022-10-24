@@ -13,10 +13,10 @@ export function useWindow() {
   const height = ref(window.innerHeight);
 
   const isMobile = computed(() => width.value < 576);
-  //   const isSm = computed(() => width.value < 768);
-  //   const isMd = computed(() => width.value < 992);
-  //   const isLg = computed(() => width.value < 1200);
-  //   const isXl = computed(() => width.value < 1400);
+  const isSm = computed(() => width.value > 0);
+  const isMd = computed(() => width.value > 768);
+  const isLg = computed(() => width.value > 992);
+  const isXl = computed(() => width.value > 1200);
 
   const onResize = () => {
     width.value = window.innerWidth;
@@ -33,5 +33,9 @@ export function useWindow() {
     width,
     height,
     isMobile,
+    isLg,
+    isMd,
+    isSm,
+    isXl,
   };
 }
