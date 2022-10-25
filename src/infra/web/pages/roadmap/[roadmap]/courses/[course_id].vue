@@ -17,7 +17,7 @@ const modules: ModuleInterface[] = [
     qtyChallenge: 1,
     done: false,
     duration: "50:00",
-    items: [
+    lessons: [
       {
         to: "introducao-a-programacao",
         title: "introdução à programação",
@@ -66,7 +66,7 @@ const modules: ModuleInterface[] = [
     qtyChallenge: 1,
     done: false,
     duration: "50:00",
-    items: [
+    lessons: [
       {
         to: "introducao-a-programacao",
         title: "introdução à programação",
@@ -115,7 +115,7 @@ const modules: ModuleInterface[] = [
     qtyChallenge: 1,
     done: false,
     duration: "50:00",
-    items: [
+    lessons: [
       {
         to: "introducao-a-programacao",
         title: "introdução à programação",
@@ -164,7 +164,7 @@ const modules: ModuleInterface[] = [
     qtyChallenge: 1,
     done: false,
     duration: "50:00",
-    items: [
+    lessons: [
       {
         to: "introducao-a-programacao",
         title: "introdução à programação",
@@ -205,30 +205,6 @@ const modules: ModuleInterface[] = [
       },
     ],
   },
-
-  // {
-  //   to: "/roadmap/1/courses/1/modules/2",
-  //   title: "Estruturas sequenciais",
-  //   qtyLessons: 6,
-  //   qtyChallenge: 2,
-  //   done: false,
-
-  // },
-
-  // {
-  //   to: "/roadmap/1/courses/1/modules/3",
-  //   title: "Estruturas de repetição",
-  //   qtyLessons: 8,
-  //   qtyChallenge: 1,
-  //   done: false,
-  // },
-  // {
-  //   to: "/roadmap/1/courses/1/modules/4",
-  //   title: "Vetores",
-  //   qtyLessons: 8,
-  //   qtyChallenge: 1,
-  //   done: false,
-  // },
 ];
 
 const { isLg } = useWindow()

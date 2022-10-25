@@ -27,16 +27,16 @@ export interface ChallengeContent extends Content {
 export type ModuleContent = VideoContent | TextContent | ChallengeContent;
 
 const props = defineProps<{
-  item: ModuleContent;
+  lesson: ModuleContent;
 }>();
 const icon = computed(() => {
-  if (props.item.type === "text") {
+  if (props.lesson.type === "text") {
     return "format-text";
   }
-  if (props.item.type === "video") {
+  if (props.lesson.type === "video") {
     return "movie-open-play-outline";
   }
-  if (props.item.type === "challenge") {
+  if (props.lesson.type === "challenge") {
     return "help";
   }
   return "";
@@ -44,18 +44,18 @@ const icon = computed(() => {
 </script>
 
 <template>
-  <RouterLink :to="item.to">
+  <RouterLink :to="lesson.to">
     <div class="d-flex align-center justify-space-between ev-item-module">
       <div class="d-flex align-center gap-2">
         <icons
-          :class="[item.done ? 'ev-item-module--done' : 'ev-item-module__icon']"
+          :class="[lesson.done ? 'ev-item-module--done' : 'ev-item-module__icon']"
           :name="icon"
         />
-        <span>{{ item.title }}</span>
+        <span>{{ lesson.title }}</span>
       </div>
       <div class="d-flex align-center gap-4">
-        <span v-if="item.type === 'video'" class="ev-item-module__time">{{
-          item.duration
+        <span v-if="lesson.type === 'video'" class="ev-item-module__time">{{
+          lesson.duration
         }}</span>
       </div>
     </div>

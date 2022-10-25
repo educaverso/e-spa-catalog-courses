@@ -9,7 +9,7 @@ export interface ModuleInterface {
   qtyLessons: number;
   qtyChallenge: number;
   done: boolean;
-  items: ModuleContent[];
+  lessons: ModuleContent[];
   duration: string;
 }
 
@@ -28,56 +28,7 @@ defineProps<{
       </template>
 
       <div class="d-flex gap-3 pt-2 pb-2 pl-3 pr-3 ev-module__content">
-        <ModuleItem v-for="item in module.items" :key="item.to" :item="item" />
-        <!-- <ModuleItem
-          :item="{
-            to: item.to,
-            title: 'Introdução à programação',
-            duration: '10:23',
-            icon: 'movie-open-play-outline',
-            done: true,
-          }"
-        />
-
-         <ModuleItem
-          :item="{
-            to: item.to,
-            title: 'Variáveis e tipos',
-            duration: '07:00',
-            icon: 'movie-open-play-outline',
-            done: true,
-          }"
-        />
-
-        <ModuleItem
-          :item="{
-            to: item.to,
-            title: 'Operadores lógicos',
-            duration: '07:00',
-            icon: 'format-text',
-            done: false,
-          }"
-        />
-
-        <ModuleItem
-          :item="{
-            to: item.to,
-            title: 'Estruturas de controle e os operadores lógicos',
-            duration: '10:00',
-            icon: 'movie-open-play-outline',
-            done: false,
-          }"
-        />
-
-        <ModuleItem
-          :item="{
-            to: item.to,
-            title: 'Desafio',
-            duration: '10:00',
-            icon: 'help',
-            done: false,
-          }"
-        /> -->
+        <ModuleItem v-for="lesson in module.lessons" :key="lesson.to" :lesson="lesson"/>
       </div>
     </Collapse>
   </div>
