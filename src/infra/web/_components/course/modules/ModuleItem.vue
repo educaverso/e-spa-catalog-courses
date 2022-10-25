@@ -1,31 +1,62 @@
 <script setup lang="ts">
 import icons from "@/infra/web/_components/_shared/icons";
 import { RouterLink } from "vue-router";
+import { computed } from "vue";
 
-export interface ModuleItemInterface {
+export interface Content {
   to: string;
   title: string;
-  duration: string;
-  icon: string;
   done: boolean;
 }
 
-defineProps<{
-  item: ModuleItemInterface;
+export interface VideoContent extends Content {
+  type: "video";
+  duration: string;
+  uri: string;
+}
+
+export interface TextContent extends Content {
+  type: "text";
+  content: string;
+}
+export interface ChallengeContent extends Content {
+  type: "challenge";
+  content: string;
+}
+
+export type ModuleContent = VideoContent | TextContent | ChallengeContent;
+
+const props = defineProps<{
+  lesson: ModuleContent;
 }>();
+const icon = computed(() => {
+  if (props.lesson.type === "text") {
+    return "format-text";
+  }
+  if (props.lesson.type === "video") {
+    return "movie-open-play-outline";
+  }
+  if (props.lesson.type === "challenge") {
+    return "help";
+  }
+  return "";
+});
 </script>
 
 <template>
-  <RouterLink :to="item.to">
+  <RouterLink :to="lesson.to">
     <div class="d-flex align-center justify-space-between ev-item-module">
       <div class="d-flex align-center gap-2">
-        <icons :class="[
-          item.done ? 'ev-item-module--done' : 'ev-item-module__icon',
-        ]" :name="item.icon" />
-        <span>{{ item.title }}</span>
+        <icons
+          :class="[lesson.done ? 'ev-item-module--done' : 'ev-item-module__icon']"
+          :name="icon"
+        />
+        <span>{{ lesson.title }}</span>
       </div>
       <div class="d-flex align-center gap-4">
-        <span class="ev-item-module__time">{{ item.duration }}</span>
+        <span v-if="lesson.type === 'video'" class="ev-item-module__time">{{
+          lesson.duration
+        }}</span>
       </div>
     </div>
   </RouterLink>

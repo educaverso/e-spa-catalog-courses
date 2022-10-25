@@ -1,9 +1,11 @@
 <script setup lang="ts">
-import { onMounted, ref, toRefs, watchEffect } from "vue";
+import { onMounted, ref, toRefs, watchEffect, PropType } from "vue";
 import { useYoutube } from "./useYoutube";
+import AspectRatio from "@/infra/web/_components/_shared/aspect-ratio/AspectRatio.vue";
+import type { VideoContent } from "../../course/modules/ModuleItem.vue";
 
 const props = defineProps({
-  videoId: { type: String, required: true },
+  item: { type: Object as PropType<VideoContent>, required: true },
   volume: { type: Number, default: 100 },
 });
 
@@ -24,12 +26,14 @@ const { changeVideo } = useYoutube(el, {
 });
 
 watchEffect(() => {
-  changeVideo(props.videoId);
+  changeVideo(props.item.uri);
 });
 </script>
 
 <template>
-  <div ref="el" class="ev-youtube"></div>
+  <AspectRatio :ratio="19 / 9">
+    <div ref="el" class="ev-youtube"></div>
+  </AspectRatio>
 </template>
 
 <style></style>
